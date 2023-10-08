@@ -28,13 +28,12 @@ foo.greetBar()✅
 String foo;✅
 int bar;✅
 ```
-- **Constant Variable** should be in snake case and all caps.
+- **Constant Variable** should be in snake case, always have value when declared, and all caps.
 ```
 float PI = 3.14;✅
 int DEFAULT_VALUE = 1;✅
 ```
 ##### Note: by writing code base on naming conventions it will make your code readable, able to follow enterprise quality code and when you reading code you can identify amd differentiate right away what is function, variable, and class. 
-
 
 # Access modifiers
 - **public**: can be used anywhere in the program
@@ -46,6 +45,15 @@ int DEFAULT_VALUE = 1;✅
 # Non-access modifiers
 - **final**: use to declare a constant variable, prevent method to be overwritten and also prevent other class to be able extend in class.
 - **static**: is used to the variable and method, class that are not really binded in encapsulating class.
+- ##### When to use static keyword? for me concrete object should not contain static methods or fields it should be in separate helper or utility class that should only contains static methods and fields for that class. because its awkward to say example ypu have code of
+```
+Foo foo = new Foo();
+foo.getTotalFoo(); // static method in Foo class
+
+instead
+
+FooHelper.getTotalFoo(); // are much more readable and concise
+```
 ##### Note: static methods and variables should be access via the class itself instead of object instance.
 ```
 Foo.bar()✅
