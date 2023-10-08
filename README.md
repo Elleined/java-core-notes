@@ -69,9 +69,18 @@ Foo foo = new Foo();
 foo.bar()❎
 ```
 
-# Difference of == operator and equals() method
-- Double equals only check if two objects memory location are the same.
-- equals() method check not the memory locstion but the content of the object.
+# Variable scoping 
+- **Global variable**: declared in encapsulating class that accesible anywhere in the class.
+- **Local variable**: declared usually inside the method and only accessible within that method.
+```
+public class Foo {
+  private String bar; // Global scope available anywhere in this class
+  public void greetBar() {
+    String foo; // Local scope only available inside this method
+  } 
+}
+```
+##### Note: Scoping of methods and variable in java are always only within the curly brackets {} it was declared on 
 
 # What is class
 - Class acts like a blueprint to create an object that has properties = fields and behavior = methods.
@@ -103,6 +112,11 @@ public class Bar extends Foo {
   }
 }
 ```
+
+
+# Difference of == operator and equals() method
+- Double equals only check if two objects memory location are the same.
+- equals() method check not the memory location but the content of the object.
 
 # Definition of Terms
 - Implicit = Automatic
