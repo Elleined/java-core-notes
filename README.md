@@ -19,33 +19,34 @@ FooBar✅ file name should be FooBar.java
 ```
 - **Method** should be verb and use camel casing.
 ```
-sayHi()✅
-eat()✅
+Foo foo = new Foo();
+foo.greet()✅
+foo.greetBar()✅
 ```
-- **Field** should be noun and use camel casing.
+- **Variable** should be noun and use camel casing.
 ```
-name✅
-age✅
+String foo;✅
+int bar;✅
 ```
 - **Constant Variable** should be in snake case and all caps.
 ```
-PI✅
-DEFAULT_VALUE✅
+float PI = 3.14;✅
+int DEFAULT_VALUE = 1;✅
 ```
 ##### Note: by writing code base on naming conventions it will make your code readable, able to follow enterprise quality code and when you reading code you can identify amd differentiate right away what is function, variable, and class. 
 
 
 # Access modifiers
-- public: can be used anywhere in the program
-- protected: can only be used by child class and not avaiable globally.
-- private: only available inside the specific class it was declared on
-- package-private: the default access modifier that only available in the specific package it was declared on.
+- **public**: can be used anywhere in the program
+- **protected**: can only be used by child class and not avaiable globally.
+- **private**: only available inside the specific class it was declared on
+- **package-private**: the default access modifier that only available in the specific package it was declared on.
 ##### Note: In inheritance access modifier cannot be more restricted than the declared one. for example
 
 # Non-access modifiers
-- final: use to declare a constant variable, prevent method to be overwritten and also prevent other class to be able extend in class.
-- static: is used to the variable and method, class that are not really binded in encapsulating class.
-#### Note: static methods and variables should be access via the class itself instead of object instance.
+- **final**: use to declare a constant variable, prevent method to be overwritten and also prevent other class to be able extend in class.
+- **static**: is used to the variable and method, class that are not really binded in encapsulating class.
+##### Note: static methods and variables should be access via the class itself instead of object instance.
 ```
 Foo.bar()✅
 foo.bar()❎
