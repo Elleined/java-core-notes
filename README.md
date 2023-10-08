@@ -114,6 +114,16 @@ public class Bar extends Foo {
 }
 ```
 
+# What does new keyword do and instatiate means?
+- The new keyword is used to create = instatiate a new object based on the class you created as blueprint of the object.
+```
+Foo foo = new Foo();
+// The new Foo() is the instantiation of the object.
+
+// The Foo foo is the just the type and the variable name.
+```
+
+
 # When to use inheritance
 - If there are common fields and methods in a parent class and child class.
 - If your classes has a relation and their relation can be read both as is-a or can-be for example:
@@ -129,6 +139,7 @@ public class Bar extends Foo {
 - equals() method check not the memory location but the content of the object.
 
 # Definition of Terms
+- Instatiate = Create
 - Implicit = Automatic
 - Explicit = Manual
 - Sub class, Derived class and Child class are all the same.
