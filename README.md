@@ -83,6 +83,36 @@ public class Foo {
 ```
 ##### Note: Scoping of methods and variable in java are always only within the curly brackets {} it was declared on 
 
+# Guard clause
+- Guard clause is used to invert the logic and return early if the there was an validation triggered.
+- Prevent nested if else
+- When you use guard clause you will never use else statement in your life.
+- Used with conjunction of throwing an error or return.
+```
+// old code
+public void add(String name) {
+  if (name.equals("bar")) {
+     // Rest of the code
+  } else {
+     System.out.println("Your are not bar");
+  }
+}
+
+// New code
+public void add(String name) {
+  if (!name.equals("bar")) {
+    System.out.println("You are not bar");
+    // Here we check immediately if hes bar and return or throw an error early.
+    return;
+    // throw new Exception
+  }
+  // Rest of the code
+}
+```
+
+# What are most prefer return or throw an error
+- For me throwing an error are much more safer because you can ensure that rest of the code will not be executing if validation is triggered unlike return bugs can be lurking around if code should be executi g after validation is triggered.
+
 # What is class
 - Class acts like a blueprint to create an object that has properties = fields and behavior = methods.
 
