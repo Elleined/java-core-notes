@@ -12,7 +12,7 @@ Java Core Notes
 - Is responsible for executing java byte-code, which is a compiled form of java code. And also responsible for handling garbage collection that allocated amd deallocates memory dynamically.
 
 # OOP (Object Oriented Programming)
-- Meaning is organize the structure of the code thats mimics real world objects via software objects that has their own behavior and properties.
+- Meaning is organize the structure of the code thats mimics real world objects via software objects that has their own behavior and properties. And has 4 Pillars of Inheritance, Polymorphism, Encapsulation, and Abstraction.
 
 # Why java is not fully Object-oriented
 - Bacause of primitive types byte, short, int, long, float, and double.
@@ -113,6 +113,15 @@ public class Bar extends Foo {
 }
 ```
 
+# When to use inheritance
+- If there are common fields and methods in a parent class and child class.
+- If your classes has a relation and their relation can be read both as is-a or can-be for example:
+  - Car is a ElectricCar
+  - Car can be ElectricCar
+
+# When to use interfaces
+- When you need multiple inheritance because java doesn't allow multiple inheritance.
+- If your classes needs a contract that they can do the methods that are declared in interface.
 
 # Difference of == operator and equals() method
 - Double equals only check if two objects memory location are the same.
@@ -124,4 +133,4 @@ public class Bar extends Foo {
 - Sub class, Derived class and Child class are all the same.
 - Super class, Base class and Parent class are all the same.
 - Method, Function, and Behavior are all the same.
-- Field and Property are the same.
+- Field, Property, Variable are all the same.
