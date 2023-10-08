@@ -5,8 +5,14 @@ Java Core Notes
 
 ## Understand the concept, rather than memorizing the code
 
-Explicit = Manual  
-Implicit = Automatic
+# Java
+- Is a high level compilef programming languange known for its strong security features, extensive in built libraries, and platform independent that been developed by James Gosling and his team at sun microsystem that has first name of Oak and later been named Java based on a coffee in indonesia. That very famous for "Write Once, Run Anywhere" qoute that has JVM.
+
+# Java Virtual Machine
+- Is responsible for executing java byte-code, which is a compiled form of java code. And also responsible for handling garbage collection that allocated amd deallocates memory dynamically.
+
+# OOP (Object Oriented Programming)
+- Meaning is organize the structure of the code thats mimics real world objects via software objects that has their own behavior and properties.
 
 # Why java is not fully Object-oriented
 - Bacause of primitive types byte, short, int, long, float, and double.
@@ -56,26 +62,52 @@ FooHelper.getTotalFoo(); // are much more readable and concise
 ```
 ##### Note: static methods and variables should be access via the class itself instead of object instance.
 ```
+bar() // is the static method
 Foo.bar()✅
+
+Foo foo = new Foo();
 foo.bar()❎
 ```
-
-# Java common words
-- Sub class, Derived class and Child class are all the same.
-- Super class, Base class and Parent class are all the same.
-- Method, Function, and Behavior are all the same.
-- Field and Property are the same.
 
 # Difference of == operator and equals() method
 - Double equals only check if two objects memory location are the same.
 - equals() method check not the memory locstion but the content of the object.
 
-# Difference of this and super keyword
-- this: is used to reference the methods and fields of current object.
-- super: used to reference the methods and fields of super class.
-
 # What is class
 - Class acts like a blueprint to create an object that has properties = fields and behavior = methods.
 
-# OOP (Object Oriented Programming)
-- Meaning is organize the structure of the code thats mimics real world objects via software objects that has their own behavior and properties.
+# Difference of this and super keyword
+- **this**: is used to reference the methods and fields of current object.
+```
+public class Foo {
+  private String bar;
+  public void Foo(String bar) {
+    this.bar = bar;
+    // here the this keyword contains the current class methods and variables that you can access.
+  }
+}
+```
+- **super**: used to reference the methods and fields of super class.
+```
+public class Foo {
+  public void greet() {
+  // Code here
+  }
+}
+
+public class Bar extends Foo {
+  @Override
+  public void greet() {
+    super.greet();
+    // Here super keyword is used to call the super class method
+  }
+}
+```
+
+# Definition of Terms
+- Implicit = Automatic
+- Explicit = Manual
+- Sub class, Derived class and Child class are all the same.
+- Super class, Base class and Parent class are all the same.
+- Method, Function, and Behavior are all the same.
+- Field and Property are the same.
