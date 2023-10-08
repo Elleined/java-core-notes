@@ -51,15 +51,6 @@ int DEFAULT_VALUE = 1;✅
 # Non-access modifiers
 - **final**: use to declare a constant variable, prevent method to be overwritten and also prevent other class to be able extend in class.
 - **static**: is used to the variable and method, class that are not really binded in encapsulating class.
-- ##### When to use static keyword? for me concrete object should not contain static methods or fields it should be in separate helper or utility class that should only contains static methods and fields for that class. because its awkward to say example ypu have code of
-```
-Foo foo = new Foo();
-foo.getTotalFoo(); // static method in Foo class
-
-instead
-
-FooHelper.getTotalFoo(); // are much more readable and concise
-```
 ##### Note: static methods and variables should be access via the class itself instead of object instance.
 ```
 bar() // is the static method
@@ -67,6 +58,16 @@ Foo.bar()✅
 
 Foo foo = new Foo();
 foo.bar()❎
+```
+# When to use static keyword?
+- For me concrete object should not contain static methods or fields it should be in separate helper or utility class that should only contains static methods and fields for that class. because its awkward to say example ypu have code of
+```
+Foo foo = new Foo();
+foo.getTotalFoo(); // static method in Foo class
+
+instead
+
+FooHelper.getTotalFoo(); // are much more readable and concise
 ```
 
 # Variable scoping 
