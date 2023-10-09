@@ -117,6 +117,7 @@ public void add(String name) {
 - Class acts like a blueprint to create an object that has properties = fields and behavior = methods.
 
 # Inheritance
+- Used to achieve polymorphism
 - Inheritance is used if theres a common fields and methods to make code reusable and readable.
 - Also if you want to have a relation between to classes to mimic real world objects.
 ```
@@ -141,7 +142,41 @@ public class Dog extends Animal {
   - **Single level**: Class that extends in another class.
   - **Multi level**: Extending to a class that extends to another class
   - **Heirarchial**: The parent class has 1 or more child class.
-![Inheritance](https://static.javatpoint.com/images/core/typesofinheritance.jpg  )
+![Inheritance](https://static.javatpoint.com/images/core/typesofinheritance.jpg)
+
+##### Note: statics can be inherited but cannot be overwritten.
+
+# Polymorphism
+- Poly means many and morphism means many ways to represent.
+  ## Two types of Polymorphism
+  - **Static/ Compile time Polymorphism**: Achieved via method overloading meaning methods that have same name but return type, parameters types, and parameter ordering are not the same. Basically methods that only the same name are called method overloading.
+```
+public void m1() { }
+public void m1(DataType arg1) { }
+```
+ - **Dynamic/ Runtime Polymorphism**: Achieved via method overriding meaning child class can do what is declared in parent class but has its own implementation or behavior.
+```
+public class Person {
+  public void greet() { }
+}
+
+public class Student extends Person {
+  @Override
+   public void greet() {
+     System.out.println("Student is greeting");
+   }
+}
+
+public class Teacher extends Person {
+  @Override
+  public void greet() {
+    System.out.println("Teacher is greeting");
+  }
+}
+
+// As you can see student and teacher are extending in person class that has greet method but when they override that method thats it you have polymorphism and they are now have their behavior how to do greet.
+```
+##### Note: You cannot achieve method overriding without inheritance.
 # Difference of this and super keyword
 - **this**: is used to reference the methods and fields of current object.
 ```
