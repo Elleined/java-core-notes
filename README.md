@@ -138,8 +138,8 @@ public class Foo {
 public class Bar extends Foo {
   @Override
   public void greet() {
-    super.greet();
-    // Here super keyword is used to call the super class method
+    super.greet(); // Will call the super class greet() method
+    this.greet() // Will call the this current class greet() method
   }
 }
 ```
