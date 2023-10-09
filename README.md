@@ -228,13 +228,13 @@ Foo foo = new Foo();
 ```
 
 # Annotation
-- Annotations is used to either add a metadata to a class, field, and method or to just have a comment but in prettier way.
+- Annotations is used to either add a metadata to a class, field, and method or Code documentation.
 - Add metadata example
 ```
 '@Retention'
 '@Entity'
 ```
-- Prettier way to comment
+- Code Documentation
 ```
 '@Override'
 '@Depracated'
