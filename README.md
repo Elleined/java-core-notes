@@ -352,14 +352,27 @@ public interface MyFunctionalInterface {
 - Used for data extraction in Collection
 - In lambda data is stored in functions and variables
 - You can think of it as short hand to in writing a method.
-- Get the be
 ```
+// Without lambda expression
+public interface Adder<T, U> {
+  void add(T num1, U num2);
+}
+
+public class IntegerAdder implements Adder<Integer, Integer> {
+ @Override
+public void add(Integer num1, Integer n2) {
+  System.out.println(num1 + num2);
+}
+
+// With lambda expression
+Adder<Integer, Integer> integerAdder = (num1, num2) -> System.out.println(num1 + num2);
+
 () -> {}
 // () is the argument list
 // -> is the lambda expression sytax
 // {} is the method body
 ```
-- Lambda Expression method are
+- Lambda expression compare to OOP
 ```
 // OOP
 access modifier✅
@@ -378,6 +391,10 @@ curly braces❎
 MyFunctionalInterface myFunctionalInterface = () -> System.out.println("Hi");
 ```
 - As you can see we almost removed all the unecessary boilerpalte code ending up in concise way of writing a method.
+
+##### Question: How does JVM knows what is return type, access modifier, , parameter list, and method name if we removed it?
+##### Answer: JVM will reference based on the method signature you defined in you functional interface thats why it can determine which method to call, what is return type, what is access modifier, parameter list, and method name.
+
 ##### Note:
  - If there only 1 line you can remove the curly braces also. but theres 2 or more lines you need to include curly braces.
 ```
