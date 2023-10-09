@@ -32,7 +32,7 @@ foo.greetBar()✅
 - **Variable** should be noun and use camel casing.
 ```
 String foo;✅
-int bar;✅
+int fooBar;✅
 ```
 - **Constant Variable** should be in snake case, always have value when declared, and all caps.
 ```
@@ -110,8 +110,8 @@ public void add(String name) {
 }
 ```
 
-# What are most prefer return or throw an error
-- For me throwing an error are much more safer because you can ensure that rest of the code will not be executing if validation is triggered unlike return bugs can be lurking around if code should be executi g after validation is triggered.
+#### What are most prefer return or throw an error
+- For me throwing an error are much more safer because you can ensure that rest of the code will not be executing if validation is triggered unlike return bugs can be lurking around if code continued executing after validation is triggered.
 
 # What is class
 - Class acts like a blueprint to create an object that has properties = fields and behavior = methods.
@@ -153,7 +153,6 @@ Foo foo = new Foo();
 // The Foo foo is the just the type and the variable name.
 ```
 
-
 # When to use inheritance
 - If there are common fields and methods in a parent class and child class.
 - If your classes has a relation and their relation can be read both as is-a or can-be for example:
@@ -163,7 +162,8 @@ Foo foo = new Foo();
 # When to use interfaces
 - When you need multiple inheritance because java doesn't allow multiple inheritance.
 - If your classes needs a contract that they can do the methods that are declared in interface.
-
+- And their relation not really matters.
+  
 # Difference of == operator and equals() method
 - Double equals only check if two objects memory location are the same.
 - equals() method check not the memory location but the content of the object.
