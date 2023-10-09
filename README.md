@@ -414,28 +414,35 @@ MyFunctionalInterface myFuntionalInterface = () -> {
  - Predicate<T>
    - boolean test(T t)
    #### Predicate chaining
-    - Predicate<T> and(Predicate<T> predicate)
-    - Predicate<T> or(Predicate<T> predicate)
-    - Predicate<T> negate()
+   ```
+   Predicate<T> and(Predicate<T> predicate)
+   Predicate<T> or(Predicate<T> predicate)
+   Predicate<T> negate()
+   ```
  - BiPredicate<T, U>
    - boolean test(T t, U u)
  - Consumer<T>
    - void accept(T t)
    #### Consumer chaining
-     - Consumer<T> andThen(Consumer<T> consumer)
+   ```
+   Consumer<T> andThen(Consumer<T> consumer)
+   ```
  - BiConsumer<T, U>
    - void accept(T t, U u)
  - Function<T, R>
    - R apply(T t)
    #### Function chaining
-     - Function<T, R> andThen(Function<T, R> function)
-     - Function<T, R> compose(Function<T, R> function)
+   ```
+   Function<T, R> andThen(Function<T, R> function)
+   Function<T, R> compose(Function<T, R> function)
+   ```
  - BiFunction<T, U, R>
    - R apply(T t, U u)
  - Supplier<R> 
    - R get()
 
 # Method Reference
+
 # Java 8 Features
 - StringJoiner
 - Lambda Expression
