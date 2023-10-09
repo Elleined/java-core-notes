@@ -293,6 +293,8 @@ public enum Gender {
 }
 ```
 
+# Exception handling
+
 # How to construct a method or function
 - Its important to deeply understand how to create and read a method because it will be useful when trying to debug and reading others code cause java is oop most of the time logics are written inside the methods. You will be able to make your code reusable and readable because you can break down big chunk of logic into separate methods.
 ```
@@ -457,6 +459,9 @@ MyFunctionalInterface myFuntionalInterface = () -> {
    - R apply(T t, U u)
  - Supplier<R> 
    - R get()
+
+#### Conclusion for lambda expression
+-  The traditional way of OOP is to implement a FunctionalInterface and create a new class that implements it. And when you need another behavior you will create new class and implement it again which leads to class explosion, more boilerplate code, and ugly code. That's why we need lambda expression to avoid that and also achieve functional programming.
 
 # Method Reference
 
