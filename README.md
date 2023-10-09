@@ -179,11 +179,13 @@ public class Teacher extends Person {
 ##### Note: You cannot achieve method overriding without inheritance.
 
 # Encapsulation 
+- Implementation level
 - Wrapping up the implementation data members and methods in a class. Used for data hiding.
   - You can achieve this by simply using getters and setters.
   - Usage of private and final keywords to hide and control what other class can access.
 
 # Abstraction
+- Design level
 - Meaning hiding unecessary details and only showing valuable information.
 - For example: When you have car and a key you start the car with the key and thats it the car works right away. But how does the key make the car starts this information we dont need to know but its important right thats how absttaction means hiding uncessary deatils and showing only valuable information.
 - Example 2: There are two type of motor right manual that has clutch and automatic has only has accelerator and dont have clutch. Automatic abstracts the clutch that we dont need to manually manage the clutch instead automatically handling it behind the scenes that we dont to care about.
@@ -223,6 +225,39 @@ Foo foo = new Foo();
 // The new Foo() is the instantiation of the object.
 
 // The Foo foo is the just the type and the variable name.
+```
+
+# Generics
+- Used to have strong compiled time types and avoid type casting which commonly leads to bugs.
+- Used when you need to a class, method, field that can work with different types. for example:
+```
+public interface Adder<T, U> {
+ public void add(T t, U u) {
+   System.out.println(t + u);
+ }
+}
+
+// If you define a interface with different data type it will lead to class explosion instead use generics to have specific method can work with different types.
+```
+## Common generics naming convention
+- Its naming convention in java that generics should have 1 letter name for readablity.
+
+ - E = element
+ - K = key
+ - N = number
+ - T = type
+ - V = value
+ - S = 2nd parameter
+ - U = 3rd parameter
+ - V = 4th parameter
+ - R = return type
+# Enums
+- Used to represent a group of constant variables. Example: Deck of Cards, Months, and Genders.
+```
+public enum Gender {
+ MALE,
+ FEMALE
+}
 ```
 
 # How to construct a method or function
