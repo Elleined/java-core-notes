@@ -149,7 +149,7 @@ public class Dog extends Animal {
 # Polymorphism
 - Poly means many and morphism means many ways to represent.
   ## Two types of Polymorphism
-  - **Static/ Compile time Polymorphism**: Achieved via method overloading meaning methods that have same name but return type, parameters types, and parameter ordering are not the same. Basically methods that only the same name are called method overloading.
+ - **Static/ Compile time Polymorphism**: Achieved via method overloading meaning methods that have same name but return type, parameters types, and parameter ordering are not the same. Basically methods that only the same name are called method overloading.
 ```
 public void m1() { }
 public void m1(DataType arg1) { }
@@ -177,6 +177,17 @@ public class Teacher extends Person {
 // As you can see student and teacher are extending in person class that has greet method but when they override that method thats it you have polymorphism and they are now have their behavior how to do greet.
 ```
 ##### Note: You cannot achieve method overriding without inheritance.
+
+# Encapsulation 
+- Wrapping up the implementation data members and methods in a class. Used for data hiding.
+  - You can achieve this by simply using getters and setters.
+  - Usage of private and final keywords to hide and control what other class can access.
+
+# Abstraction
+- Meaning hiding unecessary details and only showing valuable information.
+- For example: When you have car and a key you start the car with the key and thats it the car works right away. But how does the key make the car starts this information we dont need to know but its important right thats how absttaction means hiding uncessary deatils and showing only valuable information.
+- Example 2: There are two type of motor right manual that has clutch and automatic has only has accelerator and dont have clutch. Automatic abstracts the clutch that we dont need to manually manage the clutch instead automatically handling it behind the scenes that we dont to care about.
+
 # Difference of this and super keyword
 - **this**: is used to reference the methods and fields of current object.
 ```
