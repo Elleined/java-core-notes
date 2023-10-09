@@ -337,7 +337,84 @@ public ReturnType methodName(DataType arg1, DataType arg2) {
 # Difference of == operator and equals() method
 - Double equals only check if two objects memory location are the same.
 - equals() method check not the memory location but the content of the object.
+# Functional Interface
+- Is an interface that has one and only one abstract method but can have any number of default and static method.
+- Also used to create a lambda expression because this Functional Interface will become the type of the lambda expression this is where we will store our lambda expression
+```
+public interface MyFunctionalInterface {
+  void m1() { }
+}
+```
+# Lambda expression/Anonymous Functions
+- Introduced in Java 8 that allows functional programming in java.
+- Reduce boilerplate code
+- Code optimization
+- Used for data extraction in Collection
+- In lambda data is stored in functions and variables
+- You can think of it as short hand to in writing a method.
+- Get the be
+```
+() -> {}
+// () is the argument list
+// -> is the lambda expression sytax
+// {} is the method body
+```
+- Lambda Expression method are
+```
+// OOP
+access modifier✅
+return type✅
+method name✅
+curly braces✅
+public void m1() {
+ System.out.println("Hi");
+}
 
+// Lambda expression
+access modifier❎
+return type❎
+method name❎
+curly braces❎
+MyFunctionalInterface myFunctionalInterface = () -> System.out.println("Hi");
+```
+- As you can see we almost removed all the unecessary boilerpalte code ending up in concise way of writing a method.
+##### Note:
+ - If there only 1 line you can remove the curly braces also. but theres 2 or more lines you need to include curly braces.
+```
+// One line
+MyFunctionalInterface myFuntionalInterface = () -> System.out.println();
+
+// Two or more lines
+MyFunctionalInterface myFuntionalInterface = () -> {
+  // Other code
+}
+```
+ - If argument list is only 1 you can remove also the open/close parenthesis. but there are 2 or more you need to add open/close parenthesis.
+```
+// One argument
+MyFunctionalInterface myFuntionalInterface = arg1 -> System.out.println();
+
+// Two or more argument
+MyFunctionalInterface myFuntionalInterface = (args1, args2) -> System.out.println();
+```
+ - If your lambda has return type and you have only 1 linr of code you dont need to write the return keyword. but if you have a return type and have 2 or more lines ypu need to add return keyword.
+```
+// One line
+MyFunctionalInterface myFuntionalInterface = () -> "Hello World";
+
+// Two or more lines
+MyFunctionalInterface myFuntionalInterface = () -> {
+  // Other code
+  return "Hello World";
+}
+
+```
+
+## Pre-defined Functional Interfaces
+ - Predicate
+ - Consumer
+ - Function
+ - Supplier
 # Java 8 Features
 - StringJoiner
 - Lambda Expression
