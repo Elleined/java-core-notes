@@ -227,6 +227,18 @@ Foo foo = new Foo();
 // The Foo foo is the just the type and the variable name.
 ```
 
+# Annotation
+- Annotations is used to either add a metadata to a class, field, and method or to just have a comment but in prettier way.
+- Add metadata example
+```
+'@Retention'
+'@Entity'
+```
+- Prettier way to comment
+```
+'@Override'
+'@Depracated'
+```
 # Generics
 - Used to have strong compiled time types and avoid type casting which commonly leads to bugs.
 - Used when you need to a class, method, field that can work with different types. for example:
