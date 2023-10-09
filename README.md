@@ -116,6 +116,12 @@ public void add(String name) {
 # What is class
 - Class acts like a blueprint to create an object that has properties = fields and behavior = methods.
 
+# Inheritance
+  ## Three types of inheritance
+  - **Single level**: Class that extends in another class.
+  - **Multi level**: Extending to a class that extends to another class
+  - **Heirarchial**: The parent class has 1 or more child class.
+![Inheritance](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.javatpoint.com%2Finheritance-in-java&psig=AOvVaw3ATFHe7xzvB3MGWrtBWxUY&ust=1696906828913000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJCX3Nf854EDFQAAAAAdAAAAABAE   )
 # Difference of this and super keyword
 - **this**: is used to reference the methods and fields of current object.
 ```
