@@ -117,6 +117,26 @@ public void add(String name) {
 - Class acts like a blueprint to create an object that has properties = fields and behavior = methods.
 
 # Inheritance
+- Inheritance is used if theres a common fields and methods to make code reusable and readable.
+- Also if you want to have a relation between to classes to mimic real world objects.
+```
+public class Animal {
+  private String name;
+  public void eat() {}
+}
+
+
+public class Dog extends Animal {
+  private String breed;
+  public Dog(String name, String breed) {
+    super(name);
+    this.breed = breed;
+  }
+
+  @Override
+  public void eat() {}
+}
+```
   ## Three types of inheritance
   - **Single level**: Class that extends in another class.
   - **Multi level**: Extending to a class that extends to another class
