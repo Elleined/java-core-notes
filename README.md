@@ -198,6 +198,15 @@ public ReturnType methodName(DataType arg1, DataType arg2) {
 - Double equals only check if two objects memory location are the same.
 - equals() method check not the memory location but the content of the object.
 
+# Java 8 Features
+- StringJoiner
+- Lambda Expression
+- @FunctionalInterfaces annotation
+- Date Time API
+- Stream API
+- Optional class
+- Static and default methods in interface
+
 # Definition of Terms
 - Instatiate = Create
 - Implicit = Automatic
