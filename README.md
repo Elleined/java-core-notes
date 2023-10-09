@@ -116,6 +116,27 @@ public void add(String name) {
 # What is class
 - Class acts like a blueprint to create an object that has properties = fields and behavior = methods.
 
+# What is abstract class and method
+ ## Abstract Class
+ - Used for not to create uncessary object
+ - Abstract class cannot be instantiate or created
+ ## Abstract Method
+ - Abstract method is a method that has no implementation/body
+ - Abstract method is meant to be overwritten.
+
+# What is interface
+- By default methods in interface are public and abstract
+- By default fields in interface are public, final and static.
+- Used when you need multiple inheritance.
+- Used when you need just a contract that implementing class can do what method is declared in interface.
+- Used when you dont need class heirarchy because interfaces bypass class heirarchy.
+- Interface can have static methods and default methods
+
+ ## Difference between static and default method in interface
+ - They both need a body/implementatiom when declared in interface
+  - **Default method**: Can be overwritten.
+  - **Static method**: Cannot be overwritten.
+
 # Inheritance
 - Used to achieve polymorphism
 - Inheritance is used if theres a common fields and methods to make code reusable and readable.
