@@ -153,6 +153,36 @@ Foo foo = new Foo();
 // The Foo foo is the just the type and the variable name.
 ```
 
+# How to construct a method or function
+- Its important to deeply understand how to create and read a method because it will be useful when trying to debug and reading others code cause java is oop most of the time logics are written inside the methods. You will be able to make your code reusable and readable because you can break down big chunk of logic into separate methods.
+```
+// Method with void return type and no parameters
+public void methodName() {
+
+}
+// public is the access modifier
+// void is the return type
+// methodName is the name of the method
+// () is the parameters
+
+// Method with return type and with parameters
+public ReturnType methodName(DataType arg1, DataType arg2) {
+
+}
+// public is the access
+// ReturnType is the return value of the method
+// methodName is the name of the method
+// (DataType arg1, DataType arg2) is the parameters
+```
+##### Note: 
+  - void means nothing to return
+
+# Difference between parameter and argument
+- **Argument**: When you actually use or call the method and you supply the data inside the parameter is called argument.
+- **Parameter**: When you declare a method inside () is called parameter.
+
+##### Basically when you created a method is was called parameter and when you use that method it will be called as argument.
+
 # When to use inheritance
 - If there are common fields and methods in a parent class and child class.
 - If your classes has a relation and their relation can be read both as is-a or can-be for example:
