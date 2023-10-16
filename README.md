@@ -325,6 +325,28 @@ public ReturnType methodName(DataType arg1, DataType arg2) {
 
 ##### Basically when you created a method is was called parameter and when you use that method it will be called as argument.
 
+# What is Aggregation
+- Using other class as class member of another class for example.
+```
+public class Person {
+  private Car car;
+}
+
+private class Car {
+  private Engine engine;
+}
+
+private class Engine { }
+```
+
+##### When to use aggregation
+- Use aggregation if you need a dependency from other class or you that class as class member. and has a relation of that can be read as 'has a' for example:
+   - Person has a Car
+   - Car has a Engine
+   
+##### Difference between aggregation and inheritance
+- Nowadays aggregation are preferred instead of inheritance because it much more easy and quick to implement. But I prefer to use inheritance because when you don't use inheritance you will end up writing many code because your classes are not related and you can't reuse code because aggregation introduces coupling.
+
 # When to use inheritance
 - If there are common fields and methods in a parent class and child class.
 - If your classes has a relation and their relation can be read both as is-a or can-be for example:
