@@ -580,6 +580,10 @@ Optional<T> findAny()
 ```
 Stream<T> limit(int maxSize)
 ```
+- **toList**: returns the process element into list.
+```
+List<T> toList()
+```
 
 # Java 8 Features
 - StringJoiner
