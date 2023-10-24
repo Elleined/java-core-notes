@@ -511,6 +511,15 @@ ClassName::new
 
 ##### You can think method reference as lambda in form of just normal method asa you notice lambda is just short hand syntax of method so if you want your lambda to have name you can use method reference.
 
+# Stream API
+- Is used for processing collections and arrays.
+
+### Stream API methods
+- **filter**: will return all the values as long as condition is true.
+```
+.filter(Predicate<T> condition)
+```
+
 # Java 8 Features
 - StringJoiner
 - Lambda Expression
