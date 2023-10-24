@@ -486,6 +486,30 @@ MyFunctionalInterface myFuntionalInterface = () -> {
 -  The traditional way of OOP is to implement a FunctionalInterface and create a new class that implements it. And when you need another behavior you will create new class and implement it again which leads to class explosion, more boilerplate code, and ugly code. That's why we need lambda expression to avoid that and also achieve functional programming.
 
 # Method Reference
+- Is used replace lambda expression with existing method to maintain code readability and security.
+- :: symbol is used to reference to method.
+ 
+#### 4 types of method reference
+- **static reference**
+```
+ClassName::staticMethod
+```
+- **instance method of other object**
+```
+otherObject::instanceMethod
+```
+- **instance method of specific object your working on**
+```
+specificObject::instanceMethod
+```
+- **constructor reference**
+```
+ClassName::new
+```
+
+##### When writing method reference () of refering method is not required just the name of the method reference.
+
+##### You can think method reference as lambda in form of just normal method asa you notice lambda is just short hand syntax of method so if you want your lambda to have name you can use method reference.
 
 # Java 8 Features
 - StringJoiner
