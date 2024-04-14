@@ -528,3 +528,17 @@ ClassName::new
 - Super class, Base class and Parent class are all the same.
 - Method, Function, and Behavior are all the same.
 - Field, Property, Variable are all the same.
+
+# IO
+## 2 Types of Streams in Java
+### Bytes
+- InputStream == Read
+- OutputStream == Write
+![download_file](https://github.com/Elleined/java-core-notes/assets/111877930/6292059d-403a-4570-b9c7-f6ed059ff226)
+###### Any thing that ends with Stream its used for bytes
+
+### Character
+- Writer = Writeing
+- Reader = Reading
+![download_file (1)](https://github.com/Elleined/java-core-notes/assets/111877930/46b1f7f4-bcba-4b4b-9826-175f3c611319)
+###### Anything that ends with reader or writer its used for characters
