@@ -542,3 +542,21 @@ ClassName::new
 - Reader = Reading
 ###### Anything that ends with reader or writer its used for characters
 ![download_file (1)](https://github.com/Elleined/java-core-notes/assets/111877930/46b1f7f4-bcba-4b4b-9826-175f3c611319)
+
+
+# Variance
+## Covariance
+- Is the subtypes and more specific types
+- Provide safety in returns and not safe in parameters
+- Subtype returns
+- Subtype returns the subtypes or the same as the supertype returns
+### Be conservative in what you do. Only means that you return a more specific type becauae you are strict of what you do.
+
+## Contravariance
+###### Not supported in java it will just overload not override. But can be done using generics
+
+- Is the supertypes and more generalized types
+- Supertype parameters
+- Provide safety in parameters and not safe in returns
+- Subtype accepts supertypes as parameters
+### Be liberal of what you accept from others. Only means that you accept supertypes as parameters because you are not strict of what they supply to you.
