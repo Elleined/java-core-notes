@@ -577,6 +577,8 @@ ClassName::new
 ## Analogy
 - Imagine you want a coffee and the coffee machine is non operational and you did is just stare at the coffee machine praying it will be fixed someday and you will get stuck there forever in that coffee machine waiting to be fixed. That's what you call a blocking operation where you will just wait for the operation to be finished before doing other things.
 
+- Thread is used to execute a java code when you run a java in your main class that is the main thread and you can have many threads in your application. Remember multithreading concept. So now what is Threadblocking because java execute lines of code sequentially meaning it will wait for the line of code to be finish before getting into next line. so now imagine you have expensive operation in that line of code it will wait for that code to finish before executing the rest of the code and finally the thread will be release and ready for the next task or ready to be used again.
+
 # Non blocking operation
 ## Analogy
 -  Imagine the same scenario you want a coffee and the coffee machine is non operational you will do is leave the coffee machine for the meantime and do other things like checking email, attending meetings, etc... and when the coffee machine gets fixed you will now go back to the coffee machine and get your favorite coffee. That's what you call a non blocking operation where you will do other things while waiting for the task to get finished.
