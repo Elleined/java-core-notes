@@ -560,3 +560,23 @@ ClassName::new
 - Provide safety in parameters and not safe in returns
 - Subtype accepts supertypes as parameters
 ### Be liberal of what you accept from others. Only means that you accept supertypes as parameters because you are not strict of what they supply to you.
+
+# Threads
+# Virtual Thread
+## When to use virtual thread and native thread
+- Only use virtual thread for IO operation and Native thread for computationally expensive operation, You will say why? It's because virtual threads are using native threads behind the scene and native thread are executing in cpu an IO operation doesnt use cpu continously its just waiting for the cpu to finish processing an IO operstion unlike computationally expensive operation its using cpu continously executing operation line by line sequencially meaning that native thread when executing a computationally heavy operation are only mounted once unlike IO operation since its just waiting for the cpu to finish we can use virtual thread to mount and unmount operation like IO operation.
+
+## How does virtual thread works behind the secene
+- Virtual thread are using native thread behind the scene by the way native thread are on operating system level resource and virtual thread is just a piece of memory(an object in jvm). Going back before java 21 we can say that one task one native thread right? So if we a blocking operation we create more native threads to handle the system load which is very not recommended because you are limited in resources and scaling is just nightmare expending millions investing in machines. But java 21 introduced virtual threads where now one task is one virtual thread take note "one task per one virtual thread" not before one task one native thread, what virtual thread does its get mounted and unmounted in native thread so the native thread now a queue executor of virtual thread where the virtual thread will get mounted in native thread and if that virtual thread has an IO operstion that need to be executed in cpu it will not wait for that operstion to finished it will get unmounted for the meantime letting other virtual thread to be executed in cpu and once the cpu finished the execution of the task the virtual thread will get the result and now execute again from the program.
+
+
+###### Note
+- Virtual threads are like cotton buds that are only meant to be used and throw because they are just java objects remember u like native thread that are operating in OS level which resource intensive.
+
+# Blocking operation
+## Analogy
+- Imagine you want a coffee and the coffee machine is non operational and you did is just stare at the coffee machine praying it will be fixed someday and you will get stuck there forever in that coffee machine waiting to be fixed. That's what you call a blocking operation where you will just wait for the operation to be finished before doing other things.
+
+# Non blocking operation
+## Analogy
+-  Imagine the same scenario you want a coffee and the coffee machine is non operational you will do is leave the coffee machine for the meantime and do other things like checking email, attending meetings, etc... and when the coffee machine gets fixed you will now go back to the coffee machine and get your favorite coffee. That's what you call a non blocking operation where you will do other things while waiting for the task to get finished.
