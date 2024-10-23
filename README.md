@@ -544,6 +544,34 @@ ClassName::new
 ![download_file (1)](https://github.com/Elleined/java-core-notes/assets/111877930/46b1f7f4-bcba-4b4b-9826-175f3c611319)
 
 
+File Used for
+Represent files or directort
+- existence of files and directory
+- read, write, delete, and manage files
+
+# Path, Paths, and Files comes from java.nio that stands for new io the replacement for java.io package.
+
+
+# Path
+Represents path to a file or directory 
+- automatic separators based on os
+- Works well with Files
+- Part ng java.nio package
+
+# Paths
+A utility class to create a Path object
+
+# Files
+A utility class to perform I/O operations in Path object
+
+- provides Single or batch procesising of move, copy, delete, read and write files
+- check for existence
+- part of java.nio package stands for new io 
+
+
+# Conclusion
+Basically File object is used for legacy codes below java 7 but when java 7 comes it comes with new io package which is named java.nio meaning java new io package meant to replace the old java.io and comes with Path, Paths, and Files which is more flexible and maintainable. Where Paths and Files are utility classes to work with Path objrct easily so that when you are  dealing with io operstion used Path, Paths, and Files.
+
 # Variance
 ## Covariance
 - Is the subtypes and more specific types
