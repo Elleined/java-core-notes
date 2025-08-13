@@ -272,6 +272,33 @@ public interface Adder<T, U> {
 
 // If you define a interface with different data type it will lead to class explosion instead use generics to have specific method can work with different types.
 ```
+
+extends
+- T and all of its childclasses, subtypes
+- (Producers Extends) means reading a value and literally producing a value
+- Safe for reading, unsafe for writing
+- So mental model is extends means: "I'm reading Ts"
+- Upperbound
+
+super
+- T and all of its superclasses, supertypes
+- (Consumer Super) means writing a value and literally consuming a value
+- Safe for writing, unsafe for reading
+- So mental model is super means: "I'm writing Ts"
+- Lowerbound
+
+Object
+  └── Number
+        ├── Integer
+        └── Double
+
+List<? extends Number>
+   Could be: List<Number>, List<Integer>, List<Double>
+
+List<? super Integer>
+   Could be: List<Integer>, List<Number>, List<Object>
+
+
 ## Common generics naming convention
 - Its naming convention in java that generics should have 1 letter name for readablity.
 
